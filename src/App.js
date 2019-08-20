@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Launches from "./components/Launches";
 import LaunchPage from "./components/LaunchPage";
-
+import RocketCard from "./components/RocketCard";
 // import Articles from "./components/Articles";
 // import ArticlePage from "./components/ArticlePage";
 // import PostComment from "./components/PostComment";
@@ -25,6 +25,7 @@ class App extends Component {
         <Router>
           <Launches path="/" />
           <LaunchPage path="/launches/:flight_number" />
+          <RocketCard path="/rockets/:rocket_id" />
         </Router>
         <Footer />
       </div>

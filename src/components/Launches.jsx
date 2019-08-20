@@ -25,7 +25,6 @@ class Launches extends Component {
         `https://api.spacexdata.com/v3/launches/past?sort=launch_date_utc&order=desc&limit=10`
       )
       .then(res => {
-        console.log(res);
         this.setState({ launches: res.data });
       });
   };
