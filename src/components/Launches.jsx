@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import LaunchCard from "./LaunchCard";
 
 class Launches extends Component {
   state = {
@@ -8,25 +9,19 @@ class Launches extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.launches.map(launch => (
-          <li key={launch.flight_number}>
-            <h6>Flight Number: {launch.flight_number}</h6>
-            <h6>Launch Date: {launch.launch_date_utc}</h6>
-            <h6>Rocket Name: {launch.rocket.rocket_name}</h6>
-            <h6>Launch Year: {launch.launch_year}</h6>
-            <h6>Launch Success: {launch.launch_success}</h6>
-            <h6>More Info</h6>
-          </li>
-        ))}
-      </ul>
+      <div className="main">
+        <ul className="launches">
+          {this.state.launches.map(launch => {
+            return <LaunchCard key={launch.flight_number} launch={launch} />;
+          })}
+        </ul>
+      </div>
     );
   }
 
   componentDidMount = () => {
     axios
       .get(
-        // `https://api.spacexdata.com/v3/launches/?sort=launch_date_utc&order=asc`
         `https://api.spacexdata.com/v3/launches/past?sort=launch_date_utc&order=desc&limit=10`
       )
       .then(res => {

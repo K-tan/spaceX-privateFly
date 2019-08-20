@@ -1,0 +1,35 @@
+.launch_card {
+  border: 1px solid black;
+  list-style: none;
+  background-color: #ededed;
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+}
+
+.launches {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.launch_card {
+  display: grid;
+  grid-template-rows: 1fr, 2fr, 1fr, 1fr, 1fr, 1fr;
+}
+
+.readMore {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.readMore:link {
+  color: #ba1f31;
+}
+
+/* visited link */
+.readMore:visited {
+  color: #ba1f31;
+}
