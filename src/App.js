@@ -5,10 +5,6 @@ import Nav from "./components/Nav";
 import Launches from "./components/Launches";
 import LaunchPage from "./components/LaunchPage";
 import RocketCard from "./components/RocketCard";
-// import Articles from "./components/Articles";
-// import ArticlePage from "./components/ArticlePage";
-// import PostComment from "./components/PostComment";
-// import Error from "./components/Error";
 import { Router } from "@reach/router";
 import "./css/App.css";
 

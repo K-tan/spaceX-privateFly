@@ -8,18 +8,23 @@ class LaunchPage extends Component {
     launch: {},
     launch_site: [],
     links: [],
-    rocket: []
+    rocket: [],
+    isloading: true
   };
 
   render() {
-    const { launch, launch_site, links, rocket } = this.state;
-    return (
-      <div className="main">
-        <img className="icon" alt="home-icon" src={links.mission_patch_small} />
-        <p>Launch Site: {launch_site.site_name}</p>
+    const { launch, launch_site, links, rocket, isloading } = this.state;
+    return isloading ? (
+      <h1>LOADING</h1>
+    ) : (
+      <div className="launch">
+        <img alt="mission_patch" src={links.mission_patch_small} />
+        <p>
+          <strong>Launch Site:</strong> {launch_site.site_name}
+        </p>
         <p>{launch.details}</p>
         <Link to={`/rockets/${rocket.rocket_id}`} className="readMore">
-          Rocket Info
+          <h3>Rocket Information</h3>
         </Link>
       </div>
     );
@@ -34,7 +39,8 @@ class LaunchPage extends Component {
           launch: res.data,
           launch_site: res.data.launch_site,
           links: res.data.links,
-          rocket: res.data.rocket
+          rocket: res.data.rocket,
+          isloading: false
         });
       });
   };

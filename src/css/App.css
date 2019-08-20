@@ -10,26 +10,20 @@
     "main"
     "footer";
   letter-spacing: 1px;
-  font-family: "Cardo", serif;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
 }
 
 .heading {
   grid-area: "heading";
-  border: 1px solid red;
-  /* background-color: rgba(186, 31, 49);
-  color: white; */
 }
 .nav {
   grid-area: "nav";
-  border: 1px solid blue;
 }
 .main {
   grid-area: "main";
-  border: 1px solid orange;
-  background-color: white;
 }
 
 .footer {
   grid-area: "footer";
-  border: 1px solid green;
 }

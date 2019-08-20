@@ -1,0 +1,17 @@
+.rocket_image {
+  width: 300px;
+  height: 300px;
+}
+
+.rocket_description {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.rocketPTag {
+  margin: auto;
+  width: 50%;
+  text-align: justify;
+}

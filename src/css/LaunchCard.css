@@ -2,8 +2,8 @@
   border: 1px solid black;
   list-style: none;
   background-color: #ededed;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   margin: 10px;
 }
 
@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding: 0px;
 }
 
 .launch_card {
