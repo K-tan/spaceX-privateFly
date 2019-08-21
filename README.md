@@ -14,3 +14,14 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Built with
+
+- Runtime environment: node
+- Package manager: npm
+- UI Framework: react
+- Router: reach router
+
+## Authors
+
+Katan Patel
