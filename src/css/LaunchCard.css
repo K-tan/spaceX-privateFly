@@ -26,11 +26,14 @@
   text-transform: uppercase;
 }
 
-.readMore:link {
-  color: #ba1f31;
+.apiResult {
+  color: blue;
 }
 
-/* visited link */
-.readMore:visited {
-  color: #ba1f31;
+.moreInfo {
+  height: 25px;
+  width: 250px;
+
+  text-transform: uppercase;
+  color: red;
 }

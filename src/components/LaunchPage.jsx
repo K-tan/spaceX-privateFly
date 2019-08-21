@@ -15,7 +15,7 @@ class LaunchPage extends Component {
   render() {
     const { launch, launch_site, links, rocket, isloading } = this.state;
     return isloading ? (
-      <h1>LOADING</h1>
+      <h1>Loading...</h1>
     ) : (
       <div className="launch">
         <img alt="mission_patch" src={links.mission_patch_small} />
@@ -24,7 +24,7 @@ class LaunchPage extends Component {
         </p>
         <p>{launch.details}</p>
         <Link to={`/rockets/${rocket.rocket_id}`} className="readMore">
-          <h3>Rocket Information</h3>
+          <button className="moreInfo">Rocket Information</button>
         </Link>
       </div>
     );

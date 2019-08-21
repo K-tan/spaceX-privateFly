@@ -7,12 +7,15 @@ class RocketCard extends Component {
     rocket: {},
     height: {},
     mass: {},
-    images: []
+    images: [],
+    isLoading: true
   };
 
   render() {
-    const { rocket, height, mass, images } = this.state;
-    return (
+    const { rocket, height, mass, images, isLoading } = this.state;
+    return isLoading ? (
+      <h1>Loading...</h1>
+    ) : (
       <div className="main">
         <img className="rocket_image" alt="rocket_image" src={images[0]} />
         <p className="rocketPTag">
@@ -46,7 +49,8 @@ class RocketCard extends Component {
           rocket: res.data,
           height: res.data.height,
           mass: res.data.mass,
-          images: res.data.flickr_images
+          images: res.data.flickr_images,
+          isLoading: false
         });
       });
   };

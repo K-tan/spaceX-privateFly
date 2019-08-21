@@ -4,11 +4,15 @@ import LaunchCard from "./LaunchCard";
 
 class Launches extends Component {
   state = {
-    launches: []
+    launches: [],
+    isLoading: true
   };
 
   render() {
-    return (
+    const { isLoading } = this.state;
+    return isLoading ? (
+      <h1>Loading...</h1>
+    ) : (
       <div className="main">
         <ul className="launches">
           {this.state.launches.map(launch => {
@@ -25,7 +29,7 @@ class Launches extends Component {
         `https://api.spacexdata.com/v3/launches/past?sort=launch_date_utc&order=desc&limit=10`
       )
       .then(res => {
-        this.setState({ launches: res.data });
+        this.setState({ launches: res.data, isLoading: false });
       });
   };
 }
